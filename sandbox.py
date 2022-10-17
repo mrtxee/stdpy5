@@ -4,14 +4,56 @@ import mrtxee
 
 #result = [i for i in word_list if i not in vowels_list]
 
-def power(x, y):
-  if y == 0:
-    return 1
-  else:
-    return x * power(x, y-1)
-print(power(2, 3))
+class BankAccount:
+    def __init__(self, balance):
+        self.balance = balance
+    def __add__(self, other):
+        return( BankAccount (self.balance + other.balance) )
+
+a = BankAccount(1024)
+b = BankAccount(42)
+
+result = a + b
+print(result.balance)
 
 '''
+num = 5#int(input())
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+print (list(fib(num)))
+
+def fibonacci(n):
+    #complete the recursive function
+    fl=[0,1]
+    for _ in range (0,n) :
+        fl.append(fl[len(fl)-1]+fl[len(fl)-2])
+        print(fl[0])
+        fl.remove(fl[0])
+#fibonacci(num)
+
+
+text = 'bla-blah'#input()
+def uppercase_decorator(func):
+    def wrapper(text):
+        return func(text).upper()
+    return wrapper    
+@uppercase_decorator    
+def display_text(text):
+    return(text)
+print(display_text(text))
+
+
+txt = 'This is some text'#input()
+def words():
+    yield str(txt.split(' '))
+print( list(words())[0] )
+
+names = ["David", "John", "Annabelle", "Johnathan", "Veronica"]
+print( list( filter( lambda x : len(x)>5, names ) ) )
+
 # оператор assert, проверка высказывания
 # raise AssertionError in False
 temp = -10
