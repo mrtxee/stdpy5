@@ -5,6 +5,8 @@ import mrtxee
 mrtxee.print_fancy('= = = FILES = = =')
 fname = "filename.txt"
 
+sqs = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(sqs[7:5:-1])
 '''
 mrtxee.print_fancy('F: FILE, read, write',
                     'прочитаю файл, либо создам новый и прочитаю со второй попытки')
@@ -29,17 +31,10 @@ file = open(fname, "a")
 bytes_written = file.write("\nThis has been written WITH APPEND to a file")
 print(f'bytes_written: {bytes_written}')
 file.close()
-'''
+
 mrtxee.print_fancy('F: FILE, read, ???',
                     'с автоматической обработкой исключений и авто. закрытием файл')
 with open(fname) as f:
     print(f.read())
     f.close()
-
-'''
-Sending "r" means open in read mode, which is the default.
-Sending "w" means write mode, for rewriting the contents of a file.
-Sending "w+" ???
-Sending "a" means append mode, for adding new content to the end of the file.
-Adding "b" to a mode opens it in binary mode, which is used for non-text files
 '''

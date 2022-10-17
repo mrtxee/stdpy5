@@ -2,10 +2,14 @@ import os
 os.system('cls' if os.name == 'nt' else 'clear')
 import mrtxee
 
-x=3
-for i in range(1,9,2):
-    x *= i
-print( x )
+#result = [i for i in word_list if i not in vowels_list]
+
+def power(x, y):
+  if y == 0:
+    return 1
+  else:
+    return x * power(x, y-1)
+print(power(2, 3))
 
 '''
 # оператор assert, проверка высказывания
