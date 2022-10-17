@@ -58,14 +58,13 @@ print ( 'число вхождений: '+str(result) )
 
 mrtxee.print_fancy('CT: sample of LIST COMPREHENSION, 1 (генератор коллекции)',
                     'считаем кол-во вхождений в списке в 1 строку')
-word = 'awesome'
-word_list = list(word)
+#удалим гласные из слова, при помощи генератора коллекции
+word_list = list('awesome')
 vowels_list = list('aeiou')
-print( word_list )
-mrtxee.print_fancy('CT: sample of LIST COMPREHENSION, 1 (генератор списка)',
-                    'удалить глассные в 1 строку')
+#можно генерировать спислок, либо множество
 result = [i for i in word_list if i not in vowels_list]
-print('a = '+str(result))
+result = {i for i in word_list if i not in vowels_list}
+print(result)
 #2)
 people = [{
   "first_name": "Василий",
@@ -85,6 +84,6 @@ birthdays = [
 print(birthdays)
 
 # синтаксический сахар
-# a list comprehension ~ генератор списка
+# list comprehension ~ генератор списка
 cubes = [i**3 for i in range(5)] # [0, 1, 8, 27, 64]
 print(cubes)

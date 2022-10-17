@@ -5,7 +5,6 @@ import mrtxee
 mrtxee.print_fancy('= = = FILES = = =')
 fname = "filename.txt"
 
-
 '''
 mrtxee.print_fancy('F: FILE, read, write',
                     'прочитаю файл, либо создам новый и прочитаю со второй попытки')

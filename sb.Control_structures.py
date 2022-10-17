@@ -38,7 +38,7 @@ else:
     ...
 
 ОПЕРАТОР ДИАПАЗОНА
-range(a, [b, [step]])
+range([a], b, [step]])
 
 ОПЕРАТОРЫ ЦИКЛА for, while
 for i IN range(1,3):

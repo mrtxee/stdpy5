@@ -2,7 +2,90 @@ import os
 os.system('cls' if os.name == 'nt' else 'clear')
 import mrtxee
 
+x=3
+for i in range(1,9,2):
+    x *= i
+print( x )
+
 '''
+# оператор assert, проверка высказывания
+# raise AssertionError in False
+temp = -10
+assert (temp >= 0), "Colder than absolute zero!"
+
+#приведение строки к булену
+str='1'
+print( bool(int(str)) )
+
+#общение с оператором в терминале
+print('you inpit:', input())
+print('you inpit:', input('Введите строку: '))
+
+#кортежи
+tuple_num = (3, 9, 74, 74, 1)
+#списки
+list_num = list(tuple_num)
+list_men = ['Сергей', 'Соня', 'Дима', 'Алина', 'Егор']
+#множества
+set_num = set(list_num)
+set_men = set(list_men)
+#словари
+dict_men = dict(zip(list_men, set_num))
+tuple_men = dict_men
+#тесты
+print("\nТЕСТ НА СОРТИРОВАННОСТЬ И УНИКАЛЬНОСТЬ ЭЛЕМЕНТОВ")
+print('tuple_num',tuple_num)
+print('tuple_men',tuple_men)
+print('list_num',list_num)
+print('set_num',set_num)
+print('dict_men',dict_men)
+#нигде сортировки не выявлено
+print("\nТЕСТ НА ОБРАЩЕНИЕ ПО ИНДКСУ",i:=1)
+print('tuple_num[i]',tuple_num[i])
+print('list_num[i]',list_num[i])
+print('set_num[i]','TypeError')
+print('dict_men[i]','KeyError')
+print("\nТЕСТ НА ПЕРЕЗАПИСЬ ПО ИНДКСУ",i:=2,v:=77)
+print('tuple_num[i]=v','TypeError')
+list_num[i]=v #доступно только для списков
+print('list_num[i]=v',list_num)
+print('set_num[i]=v','TypeError')
+
+#распаковка коллекций:
+numbers = [1, 2, 3, 4]
+a, *b, c = numbers
+print(a, b, c)
+
+print('num1:',num1 := [1, 2, 3, 4, 5, 6])
+print('num2:',num2 := [4, 5, 6, 7, 8, 9])
+#|, &, -, ^, +, *, = для списков:
+print('\nОПЕРАТОРЫ СОЧЕТАНИЯ СПИСКОВ')
+print('list |, &, -, ^ operators:', 'TypeError')
+print('list + operator:', list(num1) + list(num2))
+print('list *3 operation:', list(num1) * 3)
+print('list + operator:', list(num1) + list(num2))
+#|, &, -, ^, +, *, in, = для кортежей:
+print('\nОПЕРАТОРЫ СОЧЕТАНИЯ КОРТЕЖЕЙ')
+print('set |, &, -, ^ operators:', 'TypeError')
+print('tuple + operator:', tuple(num1) + tuple(num2))
+print('tuple *3 operation:', tuple(num1) * 3)
+#|, &, -, ^, +, *, in, = для множеств:
+print('\nОПЕРАТОРЫ СОЧЕТАНИЯ МНОЖЕСТВ')
+print('set | union operator:', set(num1) | set(num2))
+print('set & intersection operator:', set(num1) & set(num2))
+print('set - difference operator:', set(num1) - set(num2))
+print('set ^ symmetric difference operator:', set(num1) ^ set(num2))
+print('set +, * operators:', 'TypeError')
+
+
+name = 'Вася'
+nums = [4, 5, 6]
+print('Здесь был', name) #string concatination case-1, auto add spaces
+print('Здесь был ' + name) #string concatination case-2
+print(f'Здесь был {name}') #f-string style output
+print('Numbers: {0} {1} {2}'. format(name, nums[1], nums[2])) #f-string style output
+
+
 # Walrus operator - Моржовый оператор
 #num = int(input())
 #print(num)
@@ -55,6 +138,7 @@ weather_parameters = {
     '0': '',
     'T': ''
 }
+
 request_headers = {
     'Accept-Language': 'ru'
 }
@@ -157,8 +241,7 @@ DATABASE = {
     'Коля': 'Красноярск'
 }
 print (DATABASE.keys())
-str=' ||| kfkfkf ||| '
-print( str.join(DATABASE.keys() ) )
+print( ' ||| kfkfkf ||| '.join(DATABASE.keys() ) )
 
 
 friends = {

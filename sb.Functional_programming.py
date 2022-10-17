@@ -36,8 +36,8 @@ decorated_f()
 
 #ГЕНЕРАТОРЫ данных yield
 mrtxee.print_fancy('FP: sample of GENERATORs, 1',
-                    'возвращаем набор данный при в цикле из сторонней функции при помомщи оп. yield')
-def isPrime(x):
+                    'получаем набор данный из сторонней функции в цикле при помомщи yield')
+def isPrime(x): # проверка простое число или нет
     if x < 2:
         return False
     elif x == 2:
@@ -52,7 +52,8 @@ def primeGenerator(a, b):
             yield i    
 f = 1#int(input())
 t = 100#int(input())
-print(list(primeGenerator(f, t)))
+generated_list = list(primeGenerator(f, t))
+print(generated_list)
 
 ## ЛЯМБДА-функции - анонимные в функции, eg.
 mrtxee.print_fancy('FP: sample of LAMBDAs, 1',
