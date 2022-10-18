@@ -1,8 +1,30 @@
 import os
 os.system('cls' if os.name == 'nt' else 'clear')
 import mrtxee
+import re
 
-#result = [i for i in word_list if i not in vowels_list]
+
+'''
+
+password = 'Hal44gb8'#input()
+pattern = r'.*[A-Z]+.*[0-9]+.*'
+if not None==re.search(pattern,password):
+    print("Password created")
+else:
+    print("Wrong format")
+
+pattern = r"^m..e$"
+word = 'masdrfe'#input()
+#print( re.search(pattern,word) )
+if None != re.search(pattern,word):
+    print('Match')
+else:
+    print('No match')
+
+
+#замена номера телефона
+result = re.sub(r'^00', '+', '001400665611',1)
+print( result )
 
 class BankAccount:
     def __init__(self, balance):
@@ -16,7 +38,7 @@ b = BankAccount(42)
 result = a + b
 print(result.balance)
 
-'''
+
 num = 5#int(input())
 def fib(n):
     a, b = 0, 1
